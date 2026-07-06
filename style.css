@@ -1,48 +1,42 @@
-/* ==========================
-   NEW SHIV EV WEBSITE
-   PART 1 - HEADER + HERO
-========================== */
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Poppins,sans-serif;
 }
 
 body{
-background:#ffffff;
+background:#f5f7fb;
 color:#222;
 }
 
-header{
+.navbar{
 width:100%;
-height:80px;
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:0 8%;
 background:#fff;
-box-shadow:0 2px 15px rgba(0,0,0,.08);
+box-shadow:0 2px 20px rgba(0,0,0,.08);
 position:sticky;
 top:0;
-z-index:1000;
+z-index:999;
 }
 
 .logo h2{
-font-size:28px;
 color:#0d6efd;
+font-size:32px;
 font-weight:700;
 }
 
-.logo p{
+.logo span{
 font-size:13px;
 color:#666;
 }
 
 nav{
 display:flex;
-gap:35px;
+gap:30px;
 }
 
 nav a{
@@ -57,153 +51,102 @@ color:#0d6efd;
 }
 
 .hero{
-width:100%;
 min-height:90vh;
 display:flex;
-align-items:center;
 justify-content:space-between;
-padding:80px 8%;
-background:linear-gradient(135deg,#ffffff,#eef5ff,#f7f9fc);
+align-items:center;
+padding:70px 8%;
+background:linear-gradient(to right,#ffffff,#eef5ff);
 }
 
-.left{
+.hero-text{
 width:50%;
 }
 
-.left h1{
-font-size:60px;
-line-height:70px;
+.hero-text h1{
+font-size:64px;
+line-height:75px;
 color:#0b3b91;
 margin-bottom:20px;
 }
 
-.left p{
+.hero-text p{
 font-size:20px;
 color:#666;
+line-height:34px;
 margin-bottom:35px;
-line-height:32px;
 }
 
 .btn{
-display:inline-block;
 padding:15px 35px;
 background:#0d6efd;
 color:#fff;
+text-decoration:none;
+border-radius:8px;
+margin-right:15px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#0848c9;
+}
+
+.btn2{
+padding:15px 35px;
+background:#fff;
+border:2px solid #0d6efd;
+color:#0d6efd;
 text-decoration:none;
 border-radius:8px;
 font-weight:600;
 transition:.3s;
 }
 
-.btn:hover{
-background:#084ec7;
-transform:translateY(-3px);
-}
-
-.right{
-width:45%;
-text-align:center;
-}
-
-.right img{
-width:100%;
-max-width:520px;
-border-radius:20px;
-filter:drop-shadow(0 20px 35px rgba(0,0,0,.15));
-}
-/* ==========================
-   PART 2 - FEATURES & SERVICES
-========================== */
-
-section{
-padding:80px 8%;
-}
-
-.section-title{
-text-align:center;
-font-size:42px;
-font-weight:700;
-color:#0b3b91;
-margin-bottom:50px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:#fff;
-padding:30px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.4s;
-text-align:center;
-border:1px solid #e8eef8;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 40px rgba(13,110,253,.18);
-}
-
-.card img{
-width:70px;
-margin-bottom:20px;
-}
-
-.card h3{
-font-size:24px;
-color:#0d6efd;
-margin-bottom:15px;
-}
-
-.card p{
-font-size:16px;
-color:#666;
-line-height:28px;
-}
-
-.services{
-background:#f5f9ff;
-}
-
-.service-box{
-background:#fff;
-padding:25px;
-border-radius:15px;
-margin-bottom:20px;
-display:flex;
-align-items:center;
-gap:20px;
-box-shadow:0 10px 20px rgba(0,0,0,.06);
-transition:.3s;
-}
-
-.service-box:hover{
-transform:translateX(10px);
-}
-
-.service-icon{
-width:60px;
-height:60px;
+.btn2:hover{
 background:#0d6efd;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
 color:#fff;
-font-size:28px;
 }
 
-.service-text h4{
-font-size:22px;
-color:#0b3b91;
-margin-bottom:8px;
+.hero-image{
+width:45%;
 }
 
-.service-text p{
-color:#666;
-line-height:26px;
+.hero-image img{
+width:100%;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+@media(max-width:900px){
+
+.navbar{
+flex-direction:column;
+gap:15px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text,
+.hero-image{
+width:100%;
+}
+
+.hero-text h1{
+font-size:42px;
+line-height:50px;
+}
+
+.hero-image{
+margin-top:40px;
+}
+
 }
