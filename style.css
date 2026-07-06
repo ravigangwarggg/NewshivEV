@@ -307,3 +307,37 @@ color:#666;
 line-height:28px;
 
 }
+/* REVIEWS */
+
+.reviews{
+padding:90px 8%;
+background:#eef5ff;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.review-card{
+background:#fff;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.review-card:hover{
+transform:translateY(-8px);
+}
+
+.review-card p{
+margin:20px 0;
+line-height:28px;
+color:#555;
+}
+
+.review-card h4{
+color:#0d6efd;
+}
